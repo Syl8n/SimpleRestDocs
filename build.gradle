@@ -44,6 +44,14 @@ tasks.named('asciidoctor') {
     dependsOn test
 }
 
+tasks.named('bootJar') {
+    dependsOn asciidoctor
+    copy {
+        from file("build/docs/asciidoc/")
+        into file("src/main/resources/static/docs")
+    }
+}
+
 //tasks.named('copyDocument') {
 //    dependsOn asciidoctor
 //    copy {
@@ -52,10 +60,4 @@ tasks.named('asciidoctor') {
 //    }
 //}
 
-//tasks.named('bootJar') {
-//    dependsOn asciidoctor
-//    copy {
-//        from "${asciidoctor.outputDir}/html5
-//        into 'static/docs'
-//    }
-//}
+
