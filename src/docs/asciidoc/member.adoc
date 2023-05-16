@@ -1,5 +1,4 @@
-:basedir: {docdir}/../../
-:snippets: {basedir}/build/generated-snippets
+:snippets: {docdir}/build/generated-snippets
 
 = RESTful Notes API Guide
 :doctype: member
